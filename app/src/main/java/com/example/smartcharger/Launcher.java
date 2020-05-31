@@ -25,6 +25,10 @@ public class Launcher extends AppCompatActivity {
 
         //获取本地缓存并判断操作
         SharedPreferences sp = getSharedPreferences("login", getApplicationContext().MODE_PRIVATE);
+        sp.edit()
+                .putString("phone","17638591897")
+                .putBoolean("isAgree",true)
+                .apply();
         String phone = sp.getString("phone", null);
         Boolean isAgree = sp.getBoolean("isAgree",false);
         try {
@@ -33,8 +37,8 @@ public class Launcher extends AppCompatActivity {
             e.printStackTrace();
         }
         if (!isAgree){
-            Intent i = new Intent(Launcher.this, AuthorizeDialog.class);
-            startActivity(i);
+            Intent intent = new Intent(Launcher.this, AuthorizeDialog.class);
+            startActivity(intent);
             overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
         }
         else if (phone != null){
