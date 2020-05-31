@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuthorizeDialog"
+    android:background="@color/black">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="130dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical"
+        android:background="@drawable/gray_background">
+
+        <TextView
+            android:id="@+id/authorize_dialog_title"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/authorize_dialog_title"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#202122" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="25dp"
+            android:scrollbarThumbVertical="@null">
+            <TextView
+                android:id="@+id/authorize_dialog_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:layout_marginLeft="13dp"
+                android:autoLink="all"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:text="@string/authorize_dialog_content"/>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/authorize_dialog_reject"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#202122"
+                android:text="@string/authorize_dialog_reject"/>
+            <TextView
+                android:id="@+id/authorize_dialog_accept"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="@string/authorize_dialog_accept"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
